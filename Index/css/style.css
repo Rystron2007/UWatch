@@ -1,0 +1,24 @@
+@font-face {
+  font-family: vonique-64;
+  src: url("vonique-64.ttf") format("truetype");
+}
+
+#navBar ul li a:hover{
+  color: black;
+}
+
+h1{
+  color: white;
+}
+
+h6{
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#nav-link{
+  color: black;
+}
+#navbar-brand {
+   font-family: vonique-64;
+}

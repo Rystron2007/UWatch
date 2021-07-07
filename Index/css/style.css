@@ -1,6 +1,6 @@
 @font-face {
-  font-family: vonique-64;
-  src: url("vonique-64.ttf") format("truetype");
+  font-family: vonique64;
+  src: url('fonts/Vonique64.ttf');
 }
 
 #navBar ul li a:hover{
@@ -12,13 +12,15 @@ h1{
 }
 
 h6{
+  font-family: vonique64;
   font-size: 20px;
   text-decoration: underline;
 }
 
-#nav-link{
+.nav-link{
   color: black;
 }
-#navbar-brand {
-   font-family: vonique-64;
+
+.navbar-brand {
+  font-family: vonique64;
 }

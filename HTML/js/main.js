@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
     <header>
       <nav id="navBar" class="navbar navbar-expand-lg navbar-light " style="background-color: #ffc300;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="font-size: 40px;">
+          <a class="navbar-brand" href="index.html" style="font-size: 40px;">
             <img class="d-inline-block mx-auto" src="img/logo.png" alt="" width="100" height="100">
             UWATCH
           </a>
@@ -12,7 +12,7 @@ class MyHeader extends HTMLElement {
             <ul id="menu" class="navbar-nav nav-pills nav-fill" style="font-size: 20px;">
               <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Afiliados</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
             </ul>
           </div>

@@ -177,7 +177,7 @@ a:hover {
 }
 .contenedor__promociones {
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
 }
 .contenedor__promociones .encabezado {
   height: 15%;

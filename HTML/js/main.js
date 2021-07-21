@@ -11,7 +11,7 @@ class MyHeader extends HTMLElement {
           <div class="container-sm">
             <ul id="menu" class="navbar-nav nav-pills nav-fill" style="font-size: 20px;">
               <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Afiliados</a></li>
+              <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
             </ul>

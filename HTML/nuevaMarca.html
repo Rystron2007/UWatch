@@ -11,44 +11,52 @@
   <my-header></my-header>
   <div class="container-fluid pb-3" style="background-color: white;">
     <div class="container-fluid pt-3">
-      <h2 class="text-center text-dark align-middle" style="font-size: 60px;">Solicitud de Servicio</h2>
+      <h2 class="text-center text-dark" style="font-size: 60px;">Vende con Nosotros</h2>
     </div>
     <div class="container-fluid rounded rounded-5 text-left text-white">
-      <div class="row align-self-center">
+      <div class="row">
         <div class="col m-1 p-2 rounded rounded-5 border-light border" style="background-color: black;">
-          <div class="pt-3">
+          <div class="pt-3" >
             <h3 class="text-white text-center">Rellene el formulario.</h3>
           </div>
           <form class="row g-6" action="index.html" method="post">
             <div class="col-6">
-              <label for="nombres" class="form-label">Nombres</label>
+              <label for="nombres" class="form-label">Nombres:</label>
               <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" id="nombres">
             </div>
             <div class="col-6">
-              <label for="apellidos" class="form-label">Apellidos</label>
+              <label for="apellidos" class="form-label">Apellidos:</label>
               <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" id="apellidos">
             </div>
             <div class="col-6">
-              <label for="dirección" class="form-label">Dirección</label>
+              <label for="dirección" class="form-label">Dirección:</label>
               <input type="text" class="form-control" placeholder="Dirección" aria-label="Dirección" id="dirección">
             </div>
             <div class="col-6">
-              <label for="email" class="form-label">Correo Electrónico</label>
+              <label for="email" class="form-label">Correo Electrónico:</label>
               <input type="text" class="form-control" placeholder="Correo Electrónico" aria-label="Correo Electrónico" id="email">
             </div>
-            <div class="col-12">
-              <label for="tipoReloj" class="form-label">Tipo de Servicio</label>
-              <select id="tipoReloj" class="form-select">
-                <option selected>--Seleccione--</option>
-                <option>Mantenimiento</option>
-                <option>Reparación</option>
-                <option>Garantía</option>
-              </select>
+            <div class="col-6">
+              <label for="nombres" class="form-label">Nombre de su Marca:</label>
+              <input type="text" class="form-control" placeholder="Nombre de su Marca" aria-label="Nombres" id="nombres">
+            </div>
+            <div class="col-6">
+              <label for="nombres" class="form-label">Telefono:</label>
+              <input type="text" class="form-control" placeholder="Ingrese su Telefono" aria-label="Nombres" id="nombres">
             </div>
             <div class="col-12">
-              <label for="descripcion">Descripción</label>
-              <textarea class="form-control" placeholder="Detalle su problema.." id="descripcion" style="height: 100px"></textarea>
+              <label for="descripcion">¿Por que le interesa vender con nosotros?</label>
+              <textarea class="form-control" placeholder="Explicanos..." id="descripcion" style="height: 100px"></textarea>
             </div>
+            <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank">
+              <div class="col-6">
+                <label for="nombres" class="form-label">Comparte tu curriculum con nosotros:</label>
+                <p>
+                  Sube un archivo:
+                  <input type="file" name="archivosubido">
+                </p>
+              </div>
+            </form>
             <div class="col text-center mt-4">
               <button type="submit" class="btn btn-primary">Envíar Solicitud</button>
             </div>
@@ -56,7 +64,7 @@
         </div>
         <div class="col-md-4 m-1 rounded rounded-5 border-light border d-flex justify-content-center" style="background-color: black;">
           <div class="m-0">
-            <a href="#"><img class="img-fluid" src="img/relojes/reloj4.jpg" alt=""></a>
+            <a href="#"><img class="img-fluid" src="img/relojes/relojd.jpg" alt=""></a>
           </div>
         </div>
       </div>

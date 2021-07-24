@@ -13,6 +13,7 @@ class MyHeader extends HTMLElement {
               <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
               <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="nuevaMarca.html">Vender</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
             </ul>
           </div>
@@ -35,10 +36,12 @@ class MyFooter extends HTMLElement {
             <h6>Suscripción</h6>
             <form  class="container-fluid">
               <div class="row">
-                <div class="col">
+                <div class="col-12">
                   <p>Suscríbase a nuestros planes de por vida.</p>
-                  <input type="email" class="form-control text-center" id="exampleInputEmail1" placeholder="Correo electrónico">
-                  <button type="submit" class="btn btn-primary">Suscribirse</button>
+                  <input type="email" class="form-control text-center" id="suscripcionEmail" placeholder="Correo electrónico">
+                </div>
+                <div class="col-12 pt-3">
+                    <button type="submit" onclick = "" class="btn btn-primary">Suscribirse</button>
                 </div>
               </div>
             </form>
@@ -50,9 +53,9 @@ class MyFooter extends HTMLElement {
           </div>
           <div class="col m-3 p-1">
             <h6>Tienda</h6>
-            <a class="nav-link" href="#">Catálogo</a>
-            <a class="nav-link" href="#">Afiliación</a>
-            <a class="nav-link" href="#">Servicios</a>
+            <a class="nav-link" href="catalogo.html">Catálogo</a>
+            <a class="nav-link" href="afiliados.html">Afiliación</a>
+            <a class="nav-link" href="servicios.html">Servicios</a>
           </div>
           <div class="col m-3 p-1">
             <h6>Redes Sociales</h6>

@@ -9,7 +9,7 @@ class MyHeader extends HTMLElement {
             UWATCH
           </a>
           <div class="container-sm">
-            <ul id="menu" class="navbar-nav nav-pills nav-fill" style="font-size: 20px;">
+            <ul id="menu" class="nav navbar-nav nav-fill" style="font-size: 20px;">
               <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
               <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>

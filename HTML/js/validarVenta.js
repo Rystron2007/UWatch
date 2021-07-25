@@ -14,15 +14,17 @@ const valInputs = {
   marca: false,
   telefono: false,
   comentario: false,
-  seleccion: false,
+  archivo: false,
 };
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
 const texto = document.getElementById("textoIndicador");
-const selector = document.getElementById("tipoReloj");
+const archivo = document.getElementById("archivoSubir");
+archivo.setAttribute("accept", "application/pdf");
+
 function validarComentario() {
   const texto = document.getElementById("descripcion");
-  if (texto.value == "") {
+  if (texto.value === null || texto.value == "") {
     document.getElementById("texto_errorTexA").classList.remove("normal");
     document.getElementById("texto_errorTexA").classList.add("error");
     valInputs.comentario = false;
@@ -32,15 +34,15 @@ function validarComentario() {
     valInputs.comentario = true;
   }
 }
-function validarSeleccion() {
-  if (selector.value == "Seleccione") {
-    document.getElementById("texto_errorS").classList.remove("normal");
-    document.getElementById("texto_errorS").classList.add("error");
-    valInputs.seleccion = false;
+function validarArchivo() {
+  if (archivo.files.length == 0) {
+    document.getElementById("texto_errorAr").classList.remove("normal");
+    document.getElementById("texto_errorAr").classList.add("error");
+    valInputs.archivo = false;
   } else {
-    document.getElementById("texto_errorS").classList.remove("error");
-    document.getElementById("texto_errorS").classList.add("normal");
-    valInputs.seleccion = true;
+    document.getElementById("texto_errorAr").classList.remove("error");
+    document.getElementById("texto_errorAr").classList.add("normal");
+    valInputs.archivo = true;
   }
 }
 function validarCampo(valor, input, campo) {
@@ -80,25 +82,25 @@ inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
 });
-
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   validarComentario();
-  validarSeleccion();
+  validarArchivo();
   if (
     valInputs.nombres &&
     valInputs.apellidos &&
     valInputs.correo &&
+    valInputs.marca &&
     valInputs.direccion &&
-    valInputs.comentario &&
-    valInputs.seleccion
+    valInputs.telefono &&
+    valInputs.archivo &&
+    valInputs.comentario
   ) {
-    texto.innerHTML = "Afiliacion Correcta";
+    texto.innerHTML = "Solicitud Correctamente enviada";
     texto.classList.remove("text-danger");
     texto.classList.add("correcto");
     formulario.reset();
   } else {
-    texto.classList.remove("correcto");
     texto.innerHTML = "Complete todos los campos";
     texto.classList.add("text-danger");
     texto.classList.add("error");

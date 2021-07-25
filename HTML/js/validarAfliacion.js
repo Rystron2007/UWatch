@@ -24,6 +24,7 @@ const selectorGenero = () => {
   if (selector.value == "Seleccione") {
     document.getElementById("texto_errorG").classList.remove("normal");
     document.getElementById("texto_errorG").classList.add("error");
+    valInputs.genero = false;
   } else {
     document.getElementById("texto_errorG").classList.remove("error");
     document.getElementById("texto_errorG").classList.add("normal");
@@ -47,6 +48,7 @@ function validarCampo(valor, input, campo) {
   } else {
     document.getElementById(`${campo}`).classList.remove("normal");
     document.getElementById(`${campo}`).classList.add("error");
+    valInputs[`${valor}`] = false;
   }
 }
 const validarFormulario = (e) => {
@@ -87,12 +89,13 @@ formulario.addEventListener("submit", (e) => {
     valInputs.genero &&
     terminos.checked
   ) {
-    texto.innerHTML = "Afiliacion Correcta";
+    texto.innerHTML = "Solicitud enviada Correctamente";
     texto.classList.remove("text-danger");
     texto.classList.add("correcto");
     formulario.reset();
   } else {
     texto.innerHTML = "Complete todos los campos";
+    texto.classList.remove("correcto");
     texto.classList.add("text-danger");
     texto.classList.add("error");
   }

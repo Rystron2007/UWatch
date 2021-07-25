@@ -9,11 +9,11 @@
 </head>
 <body>
   <my-header></my-header>
-  <div id="carouselExampleCrossfade" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
+  <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
     <div class="carousel-indicators">
       <button
       type="button"
-      data-mdb-target="#carouselExampleCrossfade"
+      data-mdb-target="#carouselVideoExample"
       data-mdb-slide-to="0"
       class="active"
       aria-current="true"
@@ -21,26 +21,32 @@
       ></button>
       <button
       type="button"
-      data-mdb-target="#carouselExampleCrossfade"
+      data-mdb-target="#carouselVideoExample"
       data-mdb-slide-to="1"
       aria-label="Slide 2"
       ></button>
       <button
       type="button"
-      data-mdb-target="#carouselExampleCrossfade"
+      data-mdb-target="#carouselVideoExample"
       data-mdb-slide-to="2"
       aria-label="Slide 3"
       ></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" data-mdb-interval="5000">
-        <img class="d-block w-100" src="img/watches/main-watch.jpg" alt="">
+      <div class="carousel-item active">
+        <video class="img-fluid" autoplay loop muted>
+          <source src="video/watch-1.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div class="carousel-item" data-mdb-interval="4000">
-        <img class="d-block w-100" src="img/watches/watch-1.jpg" alt="">
+      <div class="carousel-item">
+        <video class="img-fluid" autoplay loop muted>
+          <source src="video/watch-2.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div class="carousel-item" data-mdb-interval="5000">
-        <img class="d-block w-100" src="img/watches/watch-2.jpg" alt="">
+      <div class="carousel-item">
+        <video class="img-fluid" autoplay loop muted>
+          <source src="video/watch-3.mp4"type="video/mp4"/>
+        </video>
       </div>
     </div>
   </div>
@@ -51,17 +57,17 @@
     <div class="container-fluid rounded">
       <div class="row text-center">
         <div class="col m-3 p-1">
-          <div class="card hover-zoom">
+          <div class="card bg-image hover-zoom">
             <a href="catalogo.html"><img class="card-img" src="img/watches/watch-1.jpg" alt=""></a>
           </div>
         </div>
         <div class="col m-3 p-1">
-          <div class="card hover-zoom">
+          <div class="card bg-image hover-zoom">
             <a href="catalogo.html"><img class="card-img" src="img/watches/watch-3.jpg" alt=""></a>
           </div>
         </div>
         <div class="col m-3 p-1" >
-          <div class="card hover-zoom">
+          <div class="card bg-image hover-zoom">
             <a href="catalogo.html"><img class="card-img" src="img/watches/watch-2.jpg" alt=""></a>
           </div>
         </div>

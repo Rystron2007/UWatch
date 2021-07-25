@@ -14,7 +14,7 @@ class MyHeader extends HTMLElement {
               <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
               <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-              <li class="nav-item"><a class="nav-link" href="vender.html">Vender</a></li>
+              <li class="nav-item"><a class="nav-link" href="ventas.html">Ventas</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
             </ul>
           </div>
@@ -38,7 +38,7 @@ class MyFooter extends HTMLElement {
             <form  class="container-fluid">
               <div class="row">
                 <div class="col-12">
-                  <p>Suscríbase a nuestros planes de por vida.</p>
+                  <p class="text-dark">Suscríbase a nuestros planes de por vida.</p>
                   <input type="email" class="form-control text-center" id="suscripcionEmail" placeholder="Correo electrónico">
                 </div>
                 <div class="col-12 pt-3">

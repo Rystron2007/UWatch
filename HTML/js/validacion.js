@@ -1,3 +1,4 @@
+//Expresiones Regulares
 const expresiones = {
   hola: "saludor",
   nombres: /^[a-zA-Z]{1,15}$/,

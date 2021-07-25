@@ -1,202 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UWatch</title>
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/styleAfiliacion.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-  <link
-  href="https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css"
-  rel="stylesheet"
-  />
-</head>
-<body>
-  <my-header></my-header>
-  <section class="afiliados">
-    <section class="afiliacion">
-      <section class="portada">
-        <div class="contenedor">
-          <img src="img/Afiliacion/fondoReloj.jpg" alt="Reloj" />
-          <div class="texto">
-            <h3>UWATCH tu mejor opción!</h3>
-            <p>Afiliate y recibe nuestras mejores ofertas</p>
-          </div>
-        </div>
-      </section>
-      <section class="formulario">
-        <form action="">
-          <div class="contenedor__form">
-            <div class="encabezado_form">
-              <h2 class="subtitulo">Afiliate gratis</h2>
-              <div class="login_externo">
-                <a href="#"> <i class="bx bxl-google"></i>Google</a>
-                <a href="#"><i class="bx bxl-facebook-circle"></i>Facebook</a>
-              </div>
-              <p>Ingrese la siguiente información para afiliarse.</p>
-            </div>
-            <div class="registro">
-              <div class="grupo grupoNames">
-                <div class="items itemNombre">
-                  <label for="nombres"
-                  >Nombre <span class="text-danger">*</span></label
-                  >
-                  <input
-                  type="text"
-                  placeholder="Nombres"
-                  id="nombres"
-                  name="nombre"
-                  />
-                </div>
-                <div class="items itemApellido">
-                  <label for="apellidos"
-                  >Apellidos <span class="text-danger">*</span></label
-                  >
-                  <input
-                  type="text"
-                  placeholder="Apellidos"
-                  id="apellidos"
-                  name="apellido"
-                  />
-                </div>
-              </div>
-              <div class="grupo">
-                <div class="items">
-                  <label for="correo"
-                  >Correo electronico
-                  <span class="text-danger">*</span></label
-                  >
-                  <input
-                  type="email"
-                  placeholder="Email"
-                  id="correo"
-                  name="correos"
-                  />
-                </div>
-                <div class="items itemContraseña">
-                  <label for="contraseña"
-                  >Contraseña <span class="text-danger">*</span></label
-                  >
-                  <input
-                  type="password"
-                  placeholder="Contraseña"
-                  id="contraseña"
-                  name="contraseñas"
-                  />
-                </div>
-                <div class="items itemContraseña">
-                  <label>Genero <span class="text-danger">*</span></label>
-                  <input list="generos" />
-                  <datalist id="generos">
-                    <option value="Hombre"></option>
-                    <option value="Mujer"></option>
-                    <option value="Otro"></option>
-                  </datalist>
-                </div>
-              </div>
-              <div class="grupo grupoTerminos">
-                <div class="items">
-                  <input id="terminos" type="checkbox" />
-                  <label for="terminos" class="text_label">
-                    Al seleccionar esta casilla aceptas nuestro aviso de
-                    privacidad y los términos y condiciones
-                  </label>
-                </div>
-              </div>
-              <div class="botonAfiliar">
-                <button type="submit" class="boton">Afiliarse</button>
-              </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UWatch</title>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleAfiliacion.css" />
+    <link rel="stylesheet" href="css/error.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <my-header></my-header>
+    <section class="afiliados">
+      <section class="afiliacion">
+        <section class="portada">
+          <div class="contenedor">
+            <img src="img/Afiliacion/fondoReloj.jpg" alt="Reloj" />
+            <div class="texto">
+              <h3>UWATCH tu mejor opción!</h3>
+              <p>Afiliate y recibe nuestras mejores ofertas</p>
             </div>
           </div>
-        </form>
+        </section>
+        <section class="formulario">
+          <form action="" id="formulario">
+            <div class="contenedor__form">
+              <div class="encabezado_form">
+                <h2 class="subtitulo">Afiliate gratis</h2>
+                <div class="login_externo">
+                  <a href="#"> <i class="bx bxl-google"></i>Google</a>
+                  <a href="#"><i class="bx bxl-facebook-circle"></i>Facebook</a>
+                </div>
+                <p>Ingrese la siguiente información para afiliarse.</p>
+              </div>
+              <div class="registro">
+                <div class="grupo grupoNames">
+                  <div class="items itemNombre">
+                    <label for="nombres"
+                      >Nombre <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Nombres"
+                      id="nombres"
+                      name="nombre"
+                    />
+                    <p id="texto_errorN" class="text-danger normal">
+                      Datos Invalidos
+                    </p>
+                  </div>
+                  <div class="items itemApellido">
+                    <label for="apellidos"
+                      >Apellidos <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Apellidos"
+                      id="apellidos"
+                      name="apellido"
+                    />
+                    <p id="texto_errorA" class="text-danger normal">
+                      Datos Invalidos
+                    </p>
+                  </div>
+                </div>
+                <div class="grupo">
+                  <div class="items">
+                    <label for="correo"
+                      >Correo electronico
+                      <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Email"
+                      id="correo"
+                      name="correos"
+                    />
+                    <p id="texto_errorC" class="text-danger normal">
+                      Datos Invalidos
+                    </p>
+                  </div>
+                  <div class="items itemContraseña">
+                    <label for="contraseña"
+                      >Contraseña <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="password"
+                      autocomplete="off"
+                      placeholder="Contraseña: minimo 8 caracteres"
+                      id="contraseña"
+                      name="contraseñas"
+                    />
+                    <p id="texto_errorCon" class="text-danger normal">
+                      Datos Invalidos
+                    </p>
+                  </div>
+                  <div class="items itemContraseña">
+                    <label>Genero <span class="text-danger">*</span></label>
+                    <select id="seleccion" class="form-select">
+                      <option value="Seleccione" selected>
+                        --Seleccione--
+                      </option>
+                      <option value="Hombre">Hombre</option>
+                      <option value="Mujer">Mujer</option>
+                      <option value="Otro">Otro</option>
+                    </select>
+                    <p id="texto_errorG" class="text-danger normal">
+                      Seleccione una genero
+                    </p>
+                  </div>
+                </div>
+                <div class="grupo grupoTerminos">
+                  <div class="items">
+                    <input id="terminos" type="checkbox" />
+                    <label for="terminos" class="text_label">
+                      Al seleccionar esta casilla aceptas nuestro aviso de
+                      privacidad y los términos y condiciones
+                    </label>
+                  </div>
+                  <p id="texto_errorCas" class="text-danger normal">
+                    Marque la casilla para aceptar los terminos
+                  </p>
+                </div>
+                <div class="botonAfiliar">
+                  <div class="contendorBoton">
+                    <button type="submit" class="boton">Afiliarse</button>
+                  </div>
+                  <p id="textoIndicador" class="normal text-danger"></p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
       </section>
     </section>
-  </section>
-  <section class="promociones">
-    <section class="contenedor__promociones">
-      <section class="encabezado">
-        <div class="contenedor__encabezado">
-          <h2 class="subtitulo">Las mejores promociones con UWATCH</h2>
+    <section class="promociones">
+      <section class="contenedor__promociones">
+        <section class="encabezado">
+          <div class="contenedor__encabezado">
+            <h2 class="subtitulo">Las mejores promociones con UWATCH</h2>
 
-          <p class="parrafo">
-            Disfruta con nosotros las mejores promociones que te podemos
-            ofrecer y si eres afiliado cuentas con un plus extra de descuento
-            en todas tus compras.
-          </p>
-        </div>
-      </section>
-      <section class="tarjetas">
-        <div class="contenedor__tarjetas">
-          <div class="tarjeta tarjeta1">
-            <div class="texto__tarjeta">
-              <h3>Relojes Deportivos</h3>
-              <p>
-                Un descuento del 35% en relojes deportivos a nuestros clientes
-                por compras superiores a 100$.
-              </p>
-            </div>
-            <div class="imagen">
-              <div class="contenedor_img">
-                <img src="img/Afiliacion/deportivo.png" alt="lupa" />
+            <p class="parrafo">
+              Disfruta con nosotros las mejores promociones que te podemos
+              ofrecer y si eres afiliado cuentas con un plus extra de descuento
+              en todas tus compras.
+            </p>
+          </div>
+        </section>
+        <section class="tarjetas">
+          <div class="contenedor__tarjetas">
+            <div class="tarjeta tarjeta1">
+              <div class="texto__tarjeta">
+                <h3>Relojes Deportivos</h3>
+                <p>
+                  Un descuento del 35% en relojes deportivos a nuestros clientes
+                  por compras superiores a 100$.
+                </p>
               </div>
-              <a href="catalogo.html"> <i class="bx bx-exit"></i>Ir a Catalogo</a>
+              <div class="imagen">
+                <div class="contenedor_img">
+                  <img src="img/Afiliacion/deportivo.png" alt="lupa" />
+                </div>
+                <a href="catalogo.html">
+                  <i class="bx bx-exit"></i>Ir a Catalogo</a
+                >
+              </div>
+            </div>
+            <div class="tarjeta tarjeta2">
+              <div class="texto__tarjeta">
+                <h3>Relojes Casio</h3>
+                <p>
+                  Nuestras tiendas ofrecen por las primeras 50 compras de
+                  nuestros afiliados un 15% de descuento y envios gratis en todo
+                  el mundo.
+                </p>
+              </div>
+              <div class="imagen">
+                <div class="contenedor_img">
+                  <img src="img/Afiliacion/casio.png" alt="lupa" />
+                </div>
+                <a href="catalogo.html">
+                  <i class="bx bx-exit"></i>Ir a Catalogo</a
+                >
+              </div>
+            </div>
+            <div class="tarjeta tarjeta3">
+              <div class="texto__tarjeta">
+                <h3>Relojes de bolsillo</h3>
+                <p>
+                  No te pierdas la oportunidad de tener tu propio reloj de
+                  bolsillo con los descuentos que ofrece nuestras tiendas.
+                </p>
+              </div>
+              <div class="imagen">
+                <div class="contenedor_img">
+                  <img src="img/Afiliacion/reloj3.png" alt="lupa" />
+                </div>
+                <a href="catalogo.html">
+                  <i class="bx bx-exit"></i>Ir a Catalogo</a
+                >
+              </div>
+            </div>
+            <div class="tarjeta tarjeta4">
+              <div class="texto__tarjeta">
+                <h3>Smartwatch</h3>
+                <p>
+                  En cuentra los mas recientes relojes inteligentes con un
+                  descuento 25% con envio gratis en todo el mundo.
+                </p>
+              </div>
+              <div class="imagen">
+                <div class="contenedor_img">
+                  <img src="img/Afiliacion/reloj2.png" alt="lupa" />
+                </div>
+                <a href="catalogo.html">
+                  <i class="bx bx-exit"></i>Ir a Catalogo</a
+                >
+              </div>
             </div>
           </div>
-          <div class="tarjeta tarjeta2">
-            <div class="texto__tarjeta">
-              <h3>Relojes Casio</h3>
-              <p>
-                Nuestras tiendas ofrecen por las primeras 50 compras de
-                nuestros afiliados un 15% de descuento y envios gratis en todo
-                el mundo.
-              </p>
-            </div>
-            <div class="imagen">
-              <div class="contenedor_img">
-                <img src="img/Afiliacion/casio.png" alt="lupa" />
-              </div>
-              <a href="catalogo.html"> <i class="bx bx-exit"></i>Ir a Catalogo</a>
-            </div>
-          </div>
-          <div class="tarjeta tarjeta3">
-            <div class="texto__tarjeta">
-              <h3>Relojes de bolsillo</h3>
-              <p>
-                No te pierdas la oportunidad de tener tu propio reloj de
-                bolsillo con los descuentos que ofrece nuestras tiendas.
-              </p>
-            </div>
-            <div class="imagen">
-              <div class="contenedor_img">
-                <img src="img/Afiliacion/reloj3.png" alt="lupa" />
-              </div>
-              <a href="catalogo.html"> <i class="bx bx-exit"></i>Ir a Catalogo</a>
-            </div>
-          </div>
-          <div class="tarjeta tarjeta4">
-            <div class="texto__tarjeta">
-              <h3>Smartwatch</h3>
-              <p>
-                En cuentra los mas recientes relojes inteligentes con un
-                descuento 25% con envio gratis en todo el mundo.
-              </p>
-            </div>
-            <div class="imagen">
-              <div class="contenedor_img">
-                <img src="img/Afiliacion/reloj2.png" alt="lupa" />
-              </div>
-              <a href="catalogo.html"> <i class="bx bx-exit"></i>Ir a Catalogo</a>
-            </div>
-          </div>
-        </div>
+        </section>
       </section>
     </section>
-  </section>
-  <my-footer></my-footer>
-  <!--Documento JavaScript para hacer plantilla de Header & Footer-->
-  <script src="js/main.js"></script>
-</body>
+    <my-footer></my-footer>
+    <!--Documento JavaScript para hacer plantilla de Header & Footer-->
+    <script src="js/main.js"></script>
+    <script src="js/validacion.js"></script>
+  </body>
 </html>

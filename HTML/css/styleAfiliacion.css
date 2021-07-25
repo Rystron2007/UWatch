@@ -155,21 +155,26 @@ a:hover {
 .botonAfiliar {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contendorBoton {
+  display: flex;
   justify-content: center;
 }
 .boton {
-  margin: 25px 0;
   background-color: transparent;
   border-radius: 28px;
   color: #ffffff;
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   border: 2px solid var(--color-light);
 }
 
 .boton:hover {
   color: var(--color-yellow);
 }
+
 /* Seccion promociones */
 
 .promociones {

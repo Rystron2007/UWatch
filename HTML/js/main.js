@@ -12,6 +12,7 @@ class MyHeader extends HTMLElement {
             <ul id="menu" class="nav navbar-nav nav-fill" style="font-size: 20px;">
               <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
               <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
+              <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="nuevaMarca.html">Vender</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
@@ -24,7 +25,7 @@ class MyHeader extends HTMLElement {
   }
 }
 
-customElements.define('my-header', MyHeader);
+customElements.define("my-header", MyHeader);
 
 class MyFooter extends HTMLElement {
   connectedCallback() {
@@ -69,4 +70,4 @@ class MyFooter extends HTMLElement {
   }
 }
 
-customElements.define('my-footer', MyFooter);
+customElements.define("my-footer", MyFooter);

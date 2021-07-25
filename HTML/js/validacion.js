@@ -19,6 +19,8 @@ const inputs = document.querySelectorAll("#formulario input");
 const selector = document.getElementById("seleccion");
 const terminos = document.getElementById("terminos");
 const texto = document.getElementById("textoIndicador");
+const google = document.getElementById("google");
+const facebook = document.getElementById("facebook");
 const selectorGenero = () => {
   if (selector.value == "Seleccione") {
     document.getElementById("texto_errorG").classList.remove("normal");
@@ -68,7 +70,12 @@ inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
 });
-
+google.addEventListener("click", () => {
+  alert("Gracias por iniciar secion con Google");
+});
+facebook.addEventListener("click", () => {
+  alert("Gracias por iniciar secion con Facebook");
+});
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   selectorGenero();

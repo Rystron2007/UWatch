@@ -10,7 +10,7 @@
   --color-yellow: #ffc300;
   --Red: hsl(0, 78%, 62%);
   --plomo: #17223b;
-  --Orange: hsl(34, 97%, 64%);
+  --verde: hsl(162, 84%, 75%);
   --Blue: hsl(212, 86%, 64%);
 }
 
@@ -115,7 +115,7 @@
   padding-right: 5px;
 }
 .imagen a:hover {
-  color: var(--color-yellow);
+  color: #0c56d0;
 }
 .tarjeta1 {
   grid-column: 2 / span 1;
@@ -125,7 +125,7 @@
   grid-row: 1 / span 2;
   height: 50%;
   margin: auto 0;
-  border-top: 4px solid var(--Orange);
+  border-top: 4px solid var(--verde);
 }
 .tarjeta3 {
   grid-row: 1 / span 2;
@@ -136,6 +136,13 @@
 }
 .tarjeta4 {
   border-top: 4px solid var(--Blue);
+}
+
+.tarjeta:hover {
+  transition: transform, background-color, 0.5s, 0.5s;
+  color: #000;
+  transform: perspective(999px) rotateY(5deg) translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 900px) {
   .contenedor__promociones {

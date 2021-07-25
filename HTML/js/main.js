@@ -14,7 +14,7 @@ class MyHeader extends HTMLElement {
               <li class="nav-item"><a class="nav-link" href="afiliados.html">Afiliados</a></li>
               <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-              <li class="nav-item"><a class="nav-link" href="nuevaMarca.html">Vender</a></li>
+              <li class="nav-item"><a class="nav-link" href="vender.html">Vender</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
             </ul>
           </div>

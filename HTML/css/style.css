@@ -1,41 +1,41 @@
 @font-face {
   font-family: vonique64;
-  src: url('fonts/Vonique64.ttf');
+  src: url("fonts/Vonique64.ttf");
 }
 
-#navBar ul li a:hover{
+#navBar ul li a:hover {
   color: black;
 }
 
-h2{
+h2 {
   font-family: vonique64;
   color: white;
 }
 
-h3{
+h3 {
   font-family: vonique64;
   font-size: 30px;
   font-weight: bold;
 }
 
-.h4{
+.h4 {
   font-size: 18px;
 }
 
-h5{
+h5 {
   font-family: vonique64;
   font-size: 20px;
   font-weight: bold;
 }
 
-h6{
+h6 {
   color: black;
   font-family: vonique64;
   font-size: 20px;
   text-decoration: underline;
 }
 
-.nav-link{
+.nav-link {
   color: black;
 }
 

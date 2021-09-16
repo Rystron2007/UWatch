@@ -1,4 +1,3 @@
-<!-- parte inicial del documento-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +29,7 @@
   <header>
     <nav id="navBar" class="navbar navbar-expand-lg navbar-light " style="background-color: #ffc300;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" style="font-size: 40px;">
+        <a class="navbar-brand" href="index.php?controlador=usuarios&accion=index" style="font-size: 40px;">
           <img class="d-inline-block mx-auto" src="assets/images/logo.png" alt="" width="100" height="100">
           UWATCH
         </a>
@@ -38,7 +37,16 @@
           <ul id="menu" class="nav navbar-nav nav-left" style="font-size: 20px;">
             <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contactos</a></li>
-            <li class="nav-item"><a class="nav-link text-light bg-dark rounded-pill" href="contacto.html">Iniciar Sesión</a></li>
+            <li class="nav-item"><a class="nav-link text-light bg-dark rounded-pill" href="index.php?controlador=usuarios&accion=inicioSesion">
+              <?php
+              session_start();
+              if(isset($_SESSION['usuario'])){
+                echo "Cerrar Sesión";
+              }else{
+                echo "Iniciar Sesión";
+              }
+             ?></a>
+           </li>
           </ul>
         </div>
       </div>

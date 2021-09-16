@@ -1,20 +1,20 @@
 <?php
 require_once 'config/config.php';
-$cont= isset($_REQUEST['c'])?htmlentities($_REQUEST['c']):CONTROLADOR_PRINCIPAL;
-$accion =isset($_REQUEST['a'])?htmlentities($_REQUEST['a']):ACCION_PRINCIPAL;
+$controller= isset($_REQUEST['controlador'])?htmlentities($_REQUEST['controlador']):CONTROLADOR_PRINCIPAL;
+$accion =isset($_REQUEST['accion'])?htmlentities($_REQUEST['accion']):ACCION_PRINCIPAL;
 
-$cont= ucwords(strtolower($cont))."Controller";
+$controller= ucwords(strtolower($controller))."Controller";
 
-$archivoCont = 'controllers/' . $cont . '.php';
+$archivoController = 'controllers/' . $controller . '.php';
 
-if (!is_file($archivoCont)) {//verificar q exista
-
-    $cont=CONTROLADOR_PRINCIPAL. "Controller";
-    $archivoCont = 'controllers/' . CONTROLADOR_PRINCIPAL . 'Controller'.'.php';
-    $accion = ACCION_PRINCIPAL;
+if (!is_file($archivoController)) {
+  $controller = CONTROLADOR_PRINCIPAL. "Controller";
+  $archivoController = 'controllers/' . CONTROLADOR_PRINCIPAL . 'Controller'.'.php';
+  $accion = ACCION_PRINCIPAL;
 }
-require_once  $archivoCont;
-$objetoCont = new $cont();
-$objetoCont->$accion();
+
+require_once  $archivoController;
+$objetoController = new $controller();
+$objetoController->$accion();
 
 ?>

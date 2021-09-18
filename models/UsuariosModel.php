@@ -35,14 +35,25 @@ class UsuariosModel {
     $stmt->execute($data);
     // recuperar los datos (en caso de select)
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if(isset($usuario)){
-      session_start();
-      $_SESSION['usuario'] = $usuario['usuario'];
-      $_SESSION['cargo'] = $usuario['cargo'];
-    }
     // retornar resultados
     return $usuario;
+  }
+  public function obtenerCargo($usuario, $contrasena) { // listar todos los productos
+    $querySelec = "select cargo from Usuario where usuario = :usuario AND contrasena = :contrasena";
+    // preparar la sentencia
+    $stmt = $this->con->prepare($querySelec);
+    $data = [
+      'usuario' => $usuario,
+      'contrasena' => $contrasena,
+    ];
+    // ejecutar la sentencia
+    $stmt->execute($data);
+    // recuperar los datos (en caso de select)
+    $cargo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // retornar resultados
+    return $cargo;
+
   }
 
 
@@ -100,16 +111,11 @@ class UsuariosModel {
 
   public function eliminar($id) {
     //prepare
-    $sql = "UPDATE `productos` SET `prod_estado`=0,`prod_usuarioActualizacion`=:usu,".
-    "`prod_fechaActualizacion`=:fecha WHERE prod_id=:id";
+    $sql = "delete from usuarios WHERE prod_id=:id";
     //now());
     //bind parameters
     $sentencia = $this->con->prepare($sql);
-    $fechaActual = new DateTime('NOW');
-    $strfecha = $fechaActual->format('Y-m-d H:i:s');
     $data = [
-      'usu' => $usu,
-      'fecha' => $strfecha,
       'id' => $id
     ];
     //execute

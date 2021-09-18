@@ -1,7 +1,6 @@
 <?php
 
 require_once 'models/UsuariosModel.php';
-
 class UsuariosController {
 
   private $model;
@@ -55,12 +54,18 @@ class UsuariosController {
   public function ingresar() {
     $usuario = htmlentities($_POST['usuario']);
     $contrasena = htmlentities($_POST['contrasena']);
-
-    //llamar al modelo
     $resultado = $this->model->consultar($usuario, $contrasena);
+    if (count($resultado)>1) {
+      $ResultadoCargo = $this->model->obtenerCargo($usuario, $contrasena);
+      
+      if($ResultadoCargo['cargo']=='Vendedor'){
+        header('Location:producto.php?controlador=producto&accion=registrarProducto');
+      }else{
+        $lisnk='Location:index.php?controlador=usuarios&accion=index';
+        header($lisnk);
+        
+      }
 
-    if (isset($resultado)) {
-      header('Location:index.php?controlador=usuarios&accion=index');
     }else{
       session_start();
       $_SESSION['mensajeIngreso'] = "¡No se ha podido INGRESAR!";

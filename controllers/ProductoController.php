@@ -8,11 +8,13 @@ class ProductoController {
   private $con;
 
   // constructor
-  
+
   public function __construct() {
     $this->model = new ProductoModel();
     $this->con = Conexion::getConexion();
   }
+
+
 
   // funcion del controlador
   public function listarProductos() {
@@ -28,10 +30,10 @@ class ProductoController {
   }
 
   public function eliminarProductos() {
-    //llamar al modelo, obtener los  datos que me da el 
+    //llamar al modelo, obtener los  datos que me da el
     $id = htmlentities($_GET['id_producto']);
     $resultados = $this->model->eliminar($id);
-    
+
     if($resultados==true){
       header('Location:producto.php?controlador=producto&accion=mostrarProducto');
     }else{
@@ -42,10 +44,10 @@ class ProductoController {
   public function registrar() {
     $nombre = htmlentities($_POST['nombre']);
     $descripcion = htmlentities($_POST['descripcion']);
-    $precio = htmlentities($_POST['precio']);  
+    $precio = htmlentities($_POST['precio']);
     $resultado = false;
     //llamar al modelo
-    
+
     if(empty($nombre)||empty($descripcion)||empty($precio)){
       $msj = "¡No se ha podido REGISTRAR!";
       $color = "danger";
@@ -60,7 +62,7 @@ class ProductoController {
           $resultado = $this->model->insertar($nombre, $descripcion, $precio, $binariosImagen);
           $msj = '¡Usuario Registrado Correctamente!';
           $color = 'primary';
-        
+
       }
       else{
         $msj = "¡¡No se ha podido REGISTRAR!..... Escoja una imagen con un tamaño menor o igual a 150KB";
@@ -79,11 +81,11 @@ class ProductoController {
   public function editar() {
     $nombre = htmlentities($_POST['nombre']);
     $descripcion = htmlentities($_POST['descripcion']);
-    $precio = htmlentities($_POST['precio']);  
+    $precio = htmlentities($_POST['precio']);
     $id = htmlentities($_GET['id_producto']);
     $resultado = false;
     //llamar al modelo
-    
+
     if(empty($nombre)||empty($descripcion)||empty($precio)){
       $msj = "¡No se ha podido realizar la EDICIÓN de los datos!";
       $color = "danger";
@@ -92,7 +94,7 @@ class ProductoController {
           $resultado = $this->model->actualizar($id,$nombre, $descripcion, $precio);
           $msj = '¡Usuario Editado Correctamente!';
           $color = 'primary';
-        
+
       }
 
     session_start();
@@ -115,6 +117,10 @@ class ProductoController {
     // llamar a la vista
     require 'views/editarProducto.php';
   }
-  
+  public function catalogo() {
+    // llamar a la vista
+    require 'views/catalogo/catalogoPrincipalView.php';
+  }
+
 
 }

@@ -1,0 +1,222 @@
+<?php require_once 'views/partials/encabezado.php'; ?>
+
+<div class="container-fluid m-0 p-3" style="background-color:black ;">
+  <h2 class="text-center" style="font-size: 80px;">CATÁLOGO</h2>
+  <div class="container-fluid text-center m-0 rounded text-dark" style="background-color: white;">
+    <!--Seccion Deportivos-->
+    <div class="row d-flex justify-content-center pt-3" style="background-color: #17223b;">
+
+
+      <h3 class="text-white">Relojes Deportivos</h3>
+    </div>
+    <div class="row d-flex justify-content-center text-dark">
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Citizen Eco-Drive</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj7.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Aqualand Blue Red</p>
+        <p class="h3">$556.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Vostok-Europe</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj8.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">All Gold</p>
+        <p class="h3">$189.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Orange Gate</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj9.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4"> Orange</p>
+        <p class="h3">$199.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Mojave Leather</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj3.jpeg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Black Silver</p>
+        <p class="h3">$189.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5> Venice Beach Digital</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj12.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Clear Black</p>
+        <p class="h3">$79.99 USD</p>
+      </div>
+    </div>
+
+
+    <!--Seccion Casio-->
+    <div class="row d-flex justify-content-center pt-3" style="background-color: hsl(162, 84%, 75%);">
+      <h3 class="text-dark">Relojes Casio</h3>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Casio Gate Chrono</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj2.jpeg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Automatic</p>
+        <p class="h3">$149.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Casio Drive</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj5.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Aqualand Automatic</p>
+        <p class="h3">$200.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Vintage Digital Black</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/c1.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Automatic </p>
+        <p class="h3">$65.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Vintage Digital Gold</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/c2.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Automatic</p>
+        <p class="h3">$65.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>G-Shock MSGS200DG</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/c3.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">MS Solar Ana-Digi Rose Gold</p>
+        <p class="h3">$260.00 USD</p>
+      </div>
+    </div>
+
+
+    <!--Seccion SmartWatch-->
+    <div class="row d-flex justify-content-center pt-3" style="background-color: hsl(0, 78%, 62%);">
+      <h3 class="text-white">SmartWatch</h3>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Smart Bracelet</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/s1.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Touch Screen Sport </p>
+        <p class="h3">$100.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Alimoto Waterproof</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/s2.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Monitor Fitness</p>
+        <p class="h3">$120.99 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>CE RoHS</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/s3.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4"> Waterproof Gift Sport Smart Bracelet</p>
+        <p class="h3">$15.45 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>2021 T99 </h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/s4.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">All Watch Smartwatch for Fitness </p>
+        <p class="h3"> $160.83 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Hot Sell Manufacture</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/s5.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Gift Wirst GPS Kids Smart Tracker Watch</p>
+        <p class="h3">$200.00 USD</p>
+      </div>
+    </div>
+
+
+    <!--Seccion Bolsillo-->
+    <div class="row d-flex justify-content-center pt-3" style="background-color: hsl(212, 86%, 64%);">
+      <h3 class="text-dark">Relojes de Bolsillo</h3>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Lancardo</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj1b.jpg" width="225" height="320" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Retro Simple Diseño</p>
+        <p class="h3">$390.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>ZJchao</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj2b.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Reloj de Bolsillo Liso</p>
+        <p class="h3">$279.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>JewelryWe</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj3b.jpg" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Reloj de bolsillo con cadena</p>
+        <p class="h3">$420.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Reloj Mecánico</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj4b.jpg" width="183" height="320"  alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Cuerda Manual Cubierta</p>
+        <p class="h3">$599.00 USD</p>
+      </div>
+      <div class="col-md-2 m-3 p-1 bg-image hover-overlay" >
+        <h5>Undone Popeye</h5>
+        <img class="img-fluid rounded border border-dark border-3 hover-shadow" src="img/relojes/reloj5b.jpg" width="450" height="500" alt="">
+        <a href="catalogo.html">
+          <div class="mask" style="background-color: rgba(255, 255, 255, 0.2)"></div>
+        </a>
+        <p class="h4">Limited Edition</p>
+        <p class="h3">$549.00 USD</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- incluimos  pie de pagina -->
+<?php require_once 'views/partials/piedepagina.php'; ?>

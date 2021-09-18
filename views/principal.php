@@ -102,29 +102,6 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="table-responsive mt-2">
-      <table class="table table-striped table-bordered">
-        <thead class="thead-dark">
-          <th>ID_Empleado</th>
-          <th>Nombre Completo</th>
-          <th>Sueldo</th>
-          <th>Cargo</th>
-        </thead>
-        <tbody class="tabladatos">
-          <?php
-          foreach ($resultados as $fila) {
-            ?>
-            <tr>
-              <td><?php echo $fila['id_empleado'];?></td>
-              <td><?php echo $fila['nombre_completo'];?></td>
-              <td><?php echo $fila['sueldo'];?></td>
-              <td><?php echo $fila['cargo'];?></td>
-            </tr>
-          <?php  }?>
-        </tbody>
-      </table>
-    </div>
 
-  </div>
+  
   <?php require_once 'views/partials/piedepagina.php'; ?>

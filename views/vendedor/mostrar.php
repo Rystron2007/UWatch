@@ -4,7 +4,7 @@
   $resultados = $controlador->listarProductos();
 ?>
 <div class="contenedor-grid row">
-  <div class="card-group col-6">
+  <div class="card-group col-12">
     <?php foreach($resultados as $dato): ?>
     <div class="card border border-warning m-2 p-2 rounded rounded-3 ">
       <img class="card-img-top" 

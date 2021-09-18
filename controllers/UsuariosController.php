@@ -57,13 +57,12 @@ class UsuariosController {
     $resultado = $this->model->consultar($usuario, $contrasena);
     if (count($resultado)>1) {
       $ResultadoCargo = $this->model->obtenerCargo($usuario, $contrasena);
-      
+
       if($ResultadoCargo['cargo']=='Vendedor'){
         header('Location:producto.php?controlador=producto&accion=registrarProducto');
       }else{
         $lisnk='Location:index.php?controlador=usuarios&accion=index';
         header($lisnk);
-        
       }
 
     }else{

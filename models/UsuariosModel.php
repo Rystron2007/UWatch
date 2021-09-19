@@ -12,7 +12,7 @@ class UsuariosModel {
   }
 
   public function listar() { // listar todos los productos
-    $sql = "select * from empleado";
+    $sql = "select * from usuario";
     // preparar la sentencia
     $stmt = $this->con->prepare($sql);
     // ejecutar la sentencia
@@ -23,8 +23,93 @@ class UsuariosModel {
     return $resultados;
   }
 
+  public function listarAdmId($id) { // listar todos los usuarios
+    $querySelec = "select * from usuario WHERE id_usuario = :id";
+    // preparar la sentencia
+    $stmt = $this->con->prepare($querySelec);
+    $data = [
+      'id' => $id,
+    ];
+    // ejecutar la sentencia
+    $stmt->execute($data);
+    // recuperar los datos (en caso de select)
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // retornar resultados
+    return $resultado;
+
+  }
+
+  public function insertarAdm($usuario, $email, $contrasena, $genero,$cargo) {
+    $sql = "INSERT INTO usuario (usuario, email,contrasena ,genero,cargo)
+    VALUES (:usuario, :email,:contrasena,:genero,:cargo)";
+
+    $sentencia = $this->con->prepare($sql);
+    $data = [
+      'usuario' => $usuario,
+      'email' => $email,
+      'contrasena'=>$contrasena,
+      'genero' => $genero,
+      'cargo' => $cargo
+    ];
+
+    $sentencia->execute($data);
+    if ($sentencia->rowCount() <= 0) {
+      return false;
+    }
+    return true;
+  }
+
+  public function eliminarAdm($id) {
+    //prepare
+    $sql = "delete from usuario WHERE id_usuario = :id";
+    //now());
+    //bind parameters
+    $sentencia = $this->con->prepare($sql);
+    $data = [
+      'id' => $id,
+    ];
+    //execute
+    $sentencia->execute($data);
+    //retornar resultados,
+    if ($sentencia->rowCount() <= 0) {// verificar si se inserto
+      //rowCount permite obtner el numero de filas afectadas
+      return false;
+    }
+    return true;
+
+  }
+
+  public function actualizarAdm($id,$usuario, $email, $contrasena, $genero,$cargo ) {
+    //prepare
+    $sql = "UPDATE usuario SET usuario=:usuario,email=:email, contrasena=:contrasena,genero=:genero,cargo=:cargo WHERE id_usuario=:id";
+    //now());
+    //bind parameters
+    $sentencia = $this->con->prepare($sql);
+    $data = [
+      'id'=>$id,
+      'usuario' => $usuario,
+      'email' => $email,
+      'contrasena'=>$contrasena,
+      'genero' => $genero,
+      'cargo' => $cargo
+      
+    ];
+    //execute
+    $sentencia->execute($data);
+    //retornar resultados,
+    if ($sentencia->rowCount() <= 0) {// verificar si se inserto
+      //rowCount permite obtner el numero de filas afectadas
+      return false;
+    }
+    return true;
+  }
+
+
+
+
   public function consultar($usuario, $contrasena) { // listar todos los productos
-    $sql = "select * from Usuario where usuario = :usuario AND contrasena = :contrasena";
+    $sql = "select * from usuario where usuario = :usuario AND contrasena = :contrasena";
     // preparar la sentencia
     $stmt = $this->con->prepare($sql);
     $data = [

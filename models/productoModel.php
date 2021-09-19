@@ -18,7 +18,7 @@ class ProductoModel {
     // ejecutar la sentencia
     $stmt->execute();
     // recuperar los datos (en caso de select)
-    $resultados = $stmt->fetchAll();
+    $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // retornar resultados
     return $resultados;
   }

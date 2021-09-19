@@ -1,14 +1,14 @@
 <?php
 class Conexion{
     public static function getConexion(){
-        // $database_username = 'soriano';
-        // $database_password = 'Csoriano.12';
-        // $dbname="desarrolloweb";
-        // $dsn = 'mysql:host=localhost;dbname=' . $dbname;
+    //     $database_username = 'root';
+    //     $database_password = 'Anhn2007';
+    //   $dbname="desarrolloweb";
+    //     $dsn = 'mysql:host=localhost;dbname=' . $dbname;
         $conexion = null;
-        $link='mysql:host=localhost;dbname=desarrolloweb';
-        $user='soriano';
-        $password='Csoriano.12';
+        $link='mysql:host=localhost:3307;dbname=desarrolloweb';
+        $user='root';
+        $password='';
 
         try{
             //$conexion = new PDO($dsn, $database_username, $database_password );

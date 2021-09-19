@@ -1,5 +1,5 @@
 <?php require_once 'partials/encabezado.php'; ?>
-<section class="contenedor_menu" id="contendor" >
+<section class="contenedor_menu" id="contendor" ">
       <h1 class="card-title text-center pt-2">Productos</h1>
       <div class="contenedor__form p-3" style="min-height:50vh">
         <?php include_once("controllers/controlador_paginas_vendedor.php");

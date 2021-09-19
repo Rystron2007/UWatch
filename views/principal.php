@@ -102,5 +102,6 @@
       </div>
     </div>
   </div>
+
   
   <?php require_once 'views/partials/piedepagina.php'; ?>

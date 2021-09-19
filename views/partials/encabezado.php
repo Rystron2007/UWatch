@@ -35,7 +35,7 @@
         </a>
         <div class="d-flex justify-content-end container-sm">
           <ul id="menu" class="nav navbar-nav nav-left" style="font-size: 20px;">
-            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?controlador=producto&accion=catalogo">Catálogo</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contactos</a></li>
             <li class="nav-item"><a class="nav-link text-light bg-dark rounded-pill" href="index.php?controlador=usuarios&accion=inicioSesion">
               <?php

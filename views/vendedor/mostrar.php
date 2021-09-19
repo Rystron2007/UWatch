@@ -18,7 +18,7 @@
           <?php echo $dato['descripcion']?>
         </p>
         <p class="card-text">
-          <?php echo $dato['precio']?>
+          $ <?php echo $dato['precio']?>
         </p>
         <a href="producto.php?controlador=producto&accion=eliminarProductos&id_producto=<?php echo $dato['id_producto']?>"
         class="btn btn-danger">

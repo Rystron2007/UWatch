@@ -22,7 +22,7 @@
       </div>
       <div class="col m-3 p-1">
         <h6>Tienda</h6>
-        <a class="nav-link" href="catalogo.html">Catálogo</a>
+        <a class="nav-link" href="index.php?controlador=producto&accion=catalogo">Catálogo</a>
       </div>
       <div class="col m-3 p-1">
         <h6>Redes Sociales</h6>
